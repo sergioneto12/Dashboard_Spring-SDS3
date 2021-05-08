@@ -21,6 +21,7 @@ export default function Datatable() {
         axios.get(`${baseURL}/sales?page=${activePage}&size=20&sort=date,desc`)
             .then(response => {
                 setPage(response.data)
+                console.log(response.data)
             })
     }, [activePage]);
 
